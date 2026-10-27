@@ -1,6 +1,6 @@
 
 # Voldemort
-voldemort is a fork of kytyps5 targeted at running Sony's PlayStation os aka Orbis OS aka Prospero
+This is the forked voldemort from a fork of kytyps5 targeted at running Sony's PlayStation os aka Orbis OS aka Prospero
 following clips have been made using this repo:
 https://x.com/wzrdoo/status/2107497145951826322 (me playing a PS4 title and launching it from shell, current upstream kytyps5 doesnt support that i think)
 https://x.com/wzrdoo/status/2107195579759481338 this is the second part of the now infamous "Playstation 5 OS emulated" twitter posts that have garnered like 7mil views altogether attaching the video where i fired up Prospero for either the first or the second time
