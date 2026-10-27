@@ -477,7 +477,8 @@ void CreatePipelineInternal(GraphicContext& graphics, PipelineCache::Pipeline& p
 #if defined(__APPLE__)
 	    VK_FALSE; // MoltenVK lacks the depthBounds feature; depth-bounds testing is disabled
 #else
-	    (static_params.depth_bounds_test_enable ? VK_TRUE : VK_FALSE);
+	    ((static_params.depth_bounds_test_enable && graphics.depth_bounds_enabled) ? VK_TRUE
+	                                                                               : VK_FALSE);
 #endif
 	depth_stencil_info.minDepthBounds    = static_params.depth_min_bounds;
 	depth_stencil_info.maxDepthBounds    = static_params.depth_max_bounds;

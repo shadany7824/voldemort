@@ -2045,7 +2045,10 @@ void RuntimeLinker::PreloadAdjacentPrograms() {
 	add_dir(root / "sce_modules");
 
 	for (const auto& path: module_paths) {
-		auto* program                        = LoadProgram(path);
+		auto* program = LoadProgram(path, true);
+		if (program == nullptr) {
+			continue; // not a parseable ELF: skipped (treated as HLE-provided)
+		}
 		program->fail_if_global_not_resolved = false;
 	}
 }
